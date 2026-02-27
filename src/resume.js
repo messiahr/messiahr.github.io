@@ -2,8 +2,8 @@ import * as THREE from 'three';
 
 let renderer, scene, camera, cube, raycaster, mouse;
 
-init()
-animate()
+init();
+animate();
 
 function init() {
   initRenderer();
@@ -62,7 +62,7 @@ function resizeRendererToDisplaySize(renderer, maxPixelCount = 3840 * 2160) {
 
 function initRenderer() {
   const canvas = document.querySelector('#c');
-  renderer = new THREE.WebGLRenderer({antialias: true, canvas, alpha: true,});
+  renderer = new THREE.WebGLRenderer({ antialias: true, canvas, alpha: true });
 }
 
 function initScene() {

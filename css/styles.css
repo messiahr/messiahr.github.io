@@ -122,6 +122,7 @@ q:after {
   content: '';
   content: none;
 }
+ */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -179,4 +180,12 @@ nav a {
 
 nav a:hover {
   color: aquamarine;
+}
+
+.draggable {
+  display: inline-block;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  position: absolute;
 }

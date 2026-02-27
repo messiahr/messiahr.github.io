@@ -60,6 +60,12 @@ table {
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 header {
     display: flex;
     align-items: center;

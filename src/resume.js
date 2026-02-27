@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-let renderer, scene, camera, cube;
+let renderer, scene, camera, cube, raycaster, mouse;
 
 init()
 animate()
@@ -10,7 +10,12 @@ function init() {
   initScene();
   initCamera();
   initResume();
-  initLights()
+  initLights();
+
+  raycaster = new THREE.Raycaster();
+  mouse = new THREE.Vector2();
+
+  window.addEventListener('click', onClick, false);
 }
 
 function animate() {
@@ -85,7 +90,7 @@ function initResume() {
   const geometry = new THREE.BoxGeometry(width, height, depth);
 
   const resume = new THREE.MeshPhongMaterial({
-    map: loadColorTexture('assets/images/resume.jpg', loader),
+    map: loadColorTexture('assets/images/resume.png', loader),
   });
 
   const edge = new THREE.MeshPhongMaterial({
@@ -115,4 +120,21 @@ function initLights() {
   const light = new THREE.DirectionalLight(color, intensity);
   light.position.set(-1, 2, 4);
   scene.add(light);
+}
+
+function onClick(event) {
+  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+  raycaster.setFromCamera(mouse, camera);
+
+  const intersects = raycaster.intersectObject(cube);
+
+  if (intersects.length > 0) {
+    openPDF();
+  }
+}
+
+function openPDF() {
+  window.open('./assets/Resume.pdf', '_blank');
 }

@@ -211,9 +211,22 @@ nav a:hover {
   height: 100%;
   width: 50%;
   justify-content: space-around;
+  align-content: center;
 }
 
 body {
   display: flex;
   flex-direction: column;
+}
+
+p {
+  padding: 0.5em;
+  background-color: beige;
+}
+
+img.draggable {
+  width: 160px;      /* pick the size you want */
+  max-width: 100%;   /* prevents overflow on small screens */
+  height: auto;      /* keep aspect ratio */
+  object-fit: contain;
 }

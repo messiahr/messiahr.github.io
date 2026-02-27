@@ -59,3 +59,36 @@ table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1em;
+}
+
+.title {
+    display: inline-block;
+    font-family: 'Jacquard 12', sans-serif;
+    font-size: 2em;
+    margin: 0;
+    width: 50%;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    width: 30%;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover {
+    color: aquamarine;
+}

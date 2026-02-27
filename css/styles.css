@@ -122,7 +122,6 @@ q:after {
   content: '';
   content: none;
 }
- */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -187,5 +186,34 @@ nav a:hover {
   cursor: grab;
   touch-action: none;
   user-select: none;
-  position: absolute;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+#monologue {
+  align-self: center;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  justify-content: space-around;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }

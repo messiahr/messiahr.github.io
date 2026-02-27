@@ -57,7 +57,7 @@ function resizeRendererToDisplaySize(renderer, maxPixelCount = 3840 * 2160) {
 
 function initRenderer() {
   const canvas = document.querySelector('#c');
-  renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
+  renderer = new THREE.WebGLRenderer({antialias: true, canvas, alpha: true,});
 }
 
 function initScene() {
@@ -70,13 +70,19 @@ function initCamera() {
   const near = 0.1;
   const far = 100;
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.z = 15;
+  camera.position.z = 40;
 }
 
 function initResume() {
   const loader = new THREE.TextureLoader();
 
-  const geometry = new THREE.BoxGeometry(9, 9, 0.1);
+  // dimensions for letter paper in cm
+  const width = 21.59;
+  const height = 27.94;
+
+  const depth = 0.01;
+
+  const geometry = new THREE.BoxGeometry(width, height, depth);
 
   const resume = new THREE.MeshPhongMaterial({
     map: loadColorTexture('assets/images/resume.jpg', loader),

@@ -1,4 +1,5 @@
 // https://vite.dev/guide/build#multi-page-app
+/**
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
@@ -17,3 +18,4 @@ export default defineConfig({
     },
   },
 });
+**/

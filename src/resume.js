@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import resumeUrl from '../public/assets/images/Resume.png';
 
 let renderer, scene, camera, cube, raycaster, mouse;
 
@@ -90,7 +91,7 @@ function initResume() {
   const geometry = new THREE.BoxGeometry(width, height, depth);
 
   const resume = new THREE.MeshPhongMaterial({
-    map: loadColorTexture('assets/images/resume.png', loader),
+    map: loadColorTexture(resumeUrl, loader),
   });
 
   const edge = new THREE.MeshPhongMaterial({

@@ -90,7 +90,7 @@ function initResume() {
   const geometry = new THREE.BoxGeometry(width, height, depth);
 
   const resume = new THREE.MeshPhongMaterial({
-    map: loadColorTexture('public/assets/images/resume.png', loader),
+    map: loadColorTexture('assets/images/resume.png', loader),
   });
 
   const edge = new THREE.MeshPhongMaterial({

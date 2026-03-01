@@ -16,39 +16,34 @@ body {
   overflow: hidden;
 }
 
+/* header styles */
+
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 0 1em;
+  gap: 20px;
 }
 
 .title {
-  display: inline-block;
   font-family: 'Jacquard 12', sans-serif;
   font-size: 2em;
-  margin: 0;
+  margin-right: auto;
   width: 50%;
 }
 
-nav {
-  display: flex;
-  justify-content: end;
-  gap: 20px;
-  width: 30%;
-}
-
-nav a {
-  display: inline-block;
+a.hidden {
   text-decoration: none;
   color: inherit;
 }
 
-nav a:hover {
+a:hover {
   color: aquamarine;
 }
 
+/* end of index css*/
 
 .draggable {
   display: inline-block;

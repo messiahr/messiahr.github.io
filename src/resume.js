@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import resumeUrl from '../public/assets/images/Resume.png';
+import resumeUrl from '/assets/textures/Resume.png';
 
 let renderer, scene, camera, cube, raycaster, mouse;
 

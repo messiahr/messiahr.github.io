@@ -1,4 +1,6 @@
 @import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700');
 
 *,
 *:before,
@@ -15,39 +17,34 @@ body {
   overflow: hidden;
 }
 
+/* header styles */
+
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 0 1em;
+  gap: 20px;
 }
 
 .title {
-  display: inline-block;
   font-family: 'Jacquard 12', sans-serif;
   font-size: 2em;
-  margin: 0;
+  margin-right: auto;
   width: 50%;
 }
 
-nav {
-  display: flex;
-  justify-content: end;
-  gap: 20px;
-  width: 30%;
-}
-
-nav a {
-  display: inline-block;
+a.hidden {
   text-decoration: none;
   color: inherit;
 }
 
-nav a:hover {
+a:hover {
   color: aquamarine;
 }
 
+/* draggability */
 
 .draggable {
   display: inline-block;
@@ -60,47 +57,42 @@ nav a:hover {
   height: auto;
 }
 
-#monologue {
-  align-self: center;
+img.draggable {
+  height: 320px;      /* pick the size you want */
+  max-width: 100%;    /* prevents overflow on small screens */
+  width: auto;        /* keep aspect ratio */
+  object-fit: contain;
 }
 
-.wrapper {
-  display: flex;
-  flex: 1;
-  height: 100%;
-  width: 100%;
-  justify-content: space-around;
-  overflow: hidden;
+/* general text */
+
+p {
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: x-large;
+  font-family: 'Cormorant', serif;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 50%;
-  justify-content: space-around;
-  align-content: center;
+.text {
+  padding: 0.5em;
+  margin: 0.5em;
 }
+
+/* flexbox */
 
 body {
   display: flex;
   flex-direction: column;
 }
 
-p {
-  padding: 0.5em;
-  margin: 0.5em;
-  font-size: x-large;
+.wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-content: center;
+  overflow: hidden;
 }
 
-img.draggable {
-  height: 320px;      /* pick the size you want */
-  max-width: 100%;   /* prevents overflow on small screens */
-  width: auto;      /* keep aspect ratio */
-  object-fit: contain;
-}
-
-div.draggable {
-  padding: 0.5em;
-  margin: 0.5em;
+.column {
+  flex-direction: column;
 }

@@ -47,3 +47,60 @@ nav a {
 nav a:hover {
   color: aquamarine;
 }
+
+
+.draggable {
+  display: inline-block;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+#monologue {
+  align-self: center;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  justify-content: space-around;
+  align-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: x-large;
+}
+
+img.draggable {
+  height: 320px;      /* pick the size you want */
+  max-width: 100%;   /* prevents overflow on small screens */
+  width: auto;      /* keep aspect ratio */
+  object-fit: contain;
+}
+
+div.draggable {
+  padding: 0.5em;
+  margin: 0.5em;
+}
